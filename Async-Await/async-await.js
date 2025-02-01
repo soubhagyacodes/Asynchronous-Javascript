@@ -20,6 +20,6 @@ test()
 // -- Always returns a promise
 // -- await can only be used in async functions
 // -- await should be used only with the values returning promises because otherwise it would be insignificant
-// -- await assigns the resolved value to the variable and not the promise itself.
+// -- await returns the resolved value and not the promise itself.
 // -- without await the promise would've been assigned to data1 and data 2
 // -- test is returning a promise with value undefined
