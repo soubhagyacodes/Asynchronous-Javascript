@@ -18,6 +18,8 @@ let promise1 = new Promise((resolve, reject) => {
     }, 5000)
 })
 
+console.log(promise1)
+
 promise1
 .then(
     (value) =>{

@@ -36,6 +36,7 @@ let p3 = new Promise( (resolve, reject) => {
 
 // let allPromise = Promise.all([p1,p2,p3]) 
 // let promises = Promise.allSettled([p1,p2,p3]) 
+// let promises = Promise.race([p1,p2,p3]) 
 let promises = Promise.any([p1,p2,p3]) 
 
 promises
@@ -55,8 +56,8 @@ promises
 /*
 
 Promise.all(promises)
-for resolved -> returns a promise with value as an array of the values that were given when the promises were resolved when all the promises are resolved.
-for rejected -> a rejected promise is returned with the **FIRST** rejected value of all the promises in the array.
+for all resolved -> returns a promise with value as an array of the values that were given when the promises were resolved when all the promises are resolved.
+for rejected -> first rejected promise is returned with the **FIRST** rejected value of all the promises in the array.
 
 Promise.allSettled(promises)
 returns -> Promise with value as an array of objects containing, status and value for each promise
